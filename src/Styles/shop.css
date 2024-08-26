@@ -25,6 +25,12 @@
     transform: translateY(-10px);
 }
 
+.product-card img.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
 .product-card input {
     margin: 1rem;
     padding: 0.5rem;
