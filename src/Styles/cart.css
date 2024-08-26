@@ -1,0 +1,20 @@
+.cart-page {
+    padding: 2rem;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cart-item {
+    background-color: #1e293b;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #e2e8f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
