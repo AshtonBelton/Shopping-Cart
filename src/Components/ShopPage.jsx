@@ -14,6 +14,7 @@ function ShopPage({ products, addToCart, loading, error }) {
                         <h2>{product.title}</h2>
                         <img src={product.image} alt={product.title} className="product-image" />
                         <p>${product.price}</p>
+                        <p>{product.description}</p>
                         <input
                         type="number"
                         min="1"

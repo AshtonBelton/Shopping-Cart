@@ -5,22 +5,141 @@
     color: #e2e8f0;
 }
 
-.preview-section {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3rem;
+/* Hero Section */
+.hero-section {
+    position: relative;
+    text-align: center;
+    margin-top: 25px;
 }
 
-.preview-card {
-    background-color: #1e293b;
-    border-radius: 10px;
+.hero-image {
+    display: flex;
+    width: 25%;
+    height: auto;
+    opacity: 0.8;
+    justify-self: left;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #f0f8ff;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d97706;
+}
+
+/* Featured Products */
+.featured-products {
+    margin-top: 50px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.product-item {
+    background-color: #3a3f47;
     padding: 1rem;
-    width: 30%;
-    color: #e2e8f0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
     transition: transform 0.3s ease;
 }
 
-.preview-card:hover {
-    transform: translateY(-10px);
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.view-button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+    background-color: #d97706;
+}
+
+/* Promotional Banner */
+.promo-banner {
+    padding: 2rem;
+    text-align: center;
+}
+
+.promo-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.promo-banner p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.promo-button {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.promo-button:hover {
+    background-color: #d97706;
 }

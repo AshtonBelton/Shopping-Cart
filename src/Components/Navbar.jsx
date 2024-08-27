@@ -12,15 +12,7 @@ function Navbar({ cart }) {
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
             <Link to="/cart">
-                    Cart ({totalItems})
-                    <div className="cart-preview">
-                        {cart.map((item) => (
-                            <div key={item.id} className="cart-preview-item">
-                                <p>{item.title}</p>
-                                <p>Qty: {item.quantity}</p>
-                            </div>
-                        ))}
-                    </div>
+                Cart ({totalItems})
             </Link>
         </nav>
     );
