@@ -4,41 +4,26 @@ import { mdiHome, mdiCart, mdiStore } from "@mdi/js";
 import Icon from "@mdi/react";
 import "../Styles/styles.css";
 
-function Navbar() {
-    const [isCartHovered, setIsCartHovered] = useState(false);
+function Navbar({ cart }) {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link to="/" >
-                        <Icon path={mdiHome} size={1} />
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/shop">
-                        <Icon path={mdiStore} size={1} />
-                        Shop
-                    </Link>
-                </li>
-                <li
-                    onMouseEnter={() => setIsCartHovered(true)}
-                    onMouseLeave={() => setIsCartHovered(false)}
-                >
-                    <Link to="/cart">  
-                        <Icon path={mdiCart} size={1} />
-                        Cart
-                    </Link>
-                    {isCartHovered && (
-                        <div className="cart-preview">
-                            <p>Your cart is empty</p>
-                        </div>
-                    )}
-                </li>
-            </ul>
+        <nav className="navbar">
+            <Link to="/">Home</Link>
+            <Link to="/shop">Shop</Link>
+            <Link to="/cart">
+                    Cart ({totalItems})
+                    <div className="cart-preview">
+                        {cart.map((item) => (
+                            <div key={item.id} className="cart-preview-item">
+                                <p>{item.title}</p>
+                                <p>Qty: {item.quantity}</p>
+                            </div>
+                        ))}
+                    </div>
+            </Link>
         </nav>
     );
 }
-
+  
 export default Navbar;
