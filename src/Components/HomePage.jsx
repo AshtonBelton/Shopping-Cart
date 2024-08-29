@@ -28,8 +28,8 @@ function HomePage() {
                     </div>
                     <div className="product-item">
                         <img src={shirt} alt="Product 2" />
-                        <h3>Product 2</h3>
-                        <p>Some description of Product 2.</p>
+                        <h3>Shirts</h3>
+                        <p>Look classy with our huge collection of shirts!</p>
                         <Link to="/shop" className="view-button">View Product</Link>
                     </div>
                 </div>
