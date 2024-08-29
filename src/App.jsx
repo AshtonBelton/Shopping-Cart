@@ -56,6 +56,10 @@ function App() {
         ));
     };
 
+    function removeFromCart(productId) {
+        setCart(cart.filter(item => item.id !== productId));
+    }
+
     const calculateTotal = () => {
         return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
     };
@@ -84,6 +88,7 @@ function App() {
                                 incrementQuantity={incrementQuantity}
                                 decrementQuantity={decrementQuantity}
                                 calculateTotal={calculateTotal} 
+                                removeFromCart={removeFromCart}
                             />
                         } 
                     />

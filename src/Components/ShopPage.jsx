@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../Styles/shop.css";
 
 function ShopPage({ products, addToCart, loading, error }) {
+    const [inputValue, setInputValue] = useState(1);
     if (loading) return <p>Loading products...</p>;
     if (error) return <p>{error}</p>;
 
@@ -19,9 +20,9 @@ function ShopPage({ products, addToCart, loading, error }) {
                         type="number"
                         min="1"
                         defaultValue="1"
-                        onChange={(e) => addToCart(product, parseInt(e.target.value))}
+                        onChange={(e) => setInputValue(parseInt(e.target.value))}
                         />
-                        <button onClick={() => addToCart(product, 1)}>Add To Cart</button>
+                        <button onClick={() => addToCart(product, inputValue)}>Add To Cart</button>
                     </div>
                 ))}
             </div>
