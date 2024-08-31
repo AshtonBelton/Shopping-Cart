@@ -20,6 +20,6 @@ function CartPage({ cart, incrementQuantity, decrementQuantity, calculateTotal, 
             <h2>Total: ${calculateTotal()}</h2>
         </div>
     );
-    }
+}
 
-    export default CartPage;
+export default CartPage;

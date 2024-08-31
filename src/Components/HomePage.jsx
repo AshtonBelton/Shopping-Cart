@@ -41,6 +41,6 @@ function HomePage() {
             </section>
         </div>
     );
-};
+}
 
 export default HomePage;
